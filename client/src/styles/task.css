@@ -1,0 +1,184 @@
+.background-task {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   margin: auto;
+   backdrop-filter: blur(10px);
+}
+
+.task-form {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 50px;
+   left: 0;
+   right: 0;
+   gap: 20px;
+   width: 400px;
+   padding: 30px;
+   height: 400px;
+   background-color: #fff;
+   margin: auto;
+   text-align: center;
+   border-radius: 20px;
+}
+
+.title {
+   width: 280px;
+   height: 120px;
+   margin: auto;
+   text-indent: 15px;
+   background-color: #e6e6e6;
+   color: #000;
+   outline: none;
+   font-size: 14px;
+   border: none;
+}
+
+.title:focus {
+   border: 2px solid rgba(63, 76, 119, 1);
+}
+
+.desc:focus {
+   border: 2px solid rgba(63, 76, 119, 1);
+}
+
+.desc {
+   width: 280px;
+   height: 150px;
+   margin: auto;
+   text-indent: 15px;
+   background-color: #303030;
+   border: none;
+   outline: none;
+   font-size: 14px;
+   line-height: 20px;
+   resize: none;
+}
+
+div {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+
+.low-button,
+.medium-button,
+.high-button,
+.pending-button,
+.current-button,
+.completed-button {
+   border: none;
+   color: #eee;
+   width: 80px;
+   height: 35px;
+   border-radius: 10px;
+   transition: outline-color 0.3s ease;
+}
+
+.apply-button {
+   width: 150px;
+   height: 100px;
+   border-radius: 20px;
+   background-color: #303030;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   margin-top: 10px;
+   font-size: 14px;
+   margin: auto;
+   transition: outline-color 0.3s ease;
+}
+
+.icon-tabler-x {
+   width: 40px;
+}
+
+@media (min-width: 1024px) {
+   .task-form {
+      top: 150px;
+      left: 0px;
+      right: 0;
+      width: 500px;
+      height: 500px;
+   }
+
+   .title {
+      width: 380px;
+      height: 80px;
+   }
+
+   .desc {
+      width: 380px;
+      height: 250px;
+   }
+
+   form {
+      height: 500px;
+   }
+
+   .apply-button {
+      width: 200px;
+      height: 60px;
+      margin: auto;
+   }
+
+   .title {
+      font-size: 16px;
+   }
+
+   .desc {
+      font-size: 16px;
+   }
+
+   .low-button,
+   .medium-button,
+   .high-button,
+   .pending-button,
+   .current-button,
+   .completed-button {
+      border: none;
+      color: #eee;
+      width: 100px;
+      height: 35px;
+      border-radius: 10px;
+      font-size: 14px;
+   }
+
+   label {
+      font-size: 18px;
+   }
+
+   .zoomIn {
+      -webkit-animation-name: zoomIn;
+      animation-name: zoomIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+   }
+   @-webkit-keyframes zoomIn {
+      0% {
+         opacity: 0;
+         -webkit-transform: scale3d(0.5, 0.5, 0.5);
+         transform: scale3d(0.5, 0.5, 0.5);
+      }
+      20% {
+         opacity: 1;
+      }
+   }
+   @keyframes zoomIn {
+      0% {
+         opacity: 0;
+         -webkit-transform: scale3d(0.5, 0.5, 0.5);
+         transform: scale3d(0.5, 0.5, 0.5);
+      }
+      20% {
+         opacity: 1;
+      }
+   }
+}
